@@ -6,9 +6,7 @@ namespace Practika_5._5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите предложение");
-            string inputDataUser = Console.ReadLine();
-            string[] inputData = SplitText(inputDataUser);
+            DataOutput();
         }
 
         static string[] SplitText(string text)
@@ -21,6 +19,13 @@ namespace Practika_5._5
             }
 
             return word;
+        }
+
+        static void DataOutput()
+        {
+            Console.WriteLine("Введите предложение");
+            string inputDataUser = Console.ReadLine();
+            string[] inputData = SplitText(inputDataUser);
         }
     }
 }
