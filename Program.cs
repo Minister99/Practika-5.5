@@ -6,26 +6,24 @@ namespace Practika_5._5
     {
         static void Main(string[] args)
         {
-            DataOutput();
+            Console.WriteLine("Введите предложение");
+            string inputDataUser = Console.ReadLine();
+            string[] inputData = SplitText(inputDataUser);
+            PrintWord(inputData);
         }
 
         static string[] SplitText(string text)
         {
             string[] word = text.Split(new char[] { ' ' },StringSplitOptions.RemoveEmptyEntries);
-
-            foreach (string s in word) 
-            {
-                Console.WriteLine(s);
-            }
-
             return word;
         }
 
-        static void DataOutput()
+        static void PrintWord(string[] text)
         {
-            Console.WriteLine("Введите предложение");
-            string inputDataUser = Console.ReadLine();
-            string[] inputData = SplitText(inputDataUser);
+            foreach (string n in text) 
+            {
+                Console.WriteLine(n);
+            }
         }
     }
 }
